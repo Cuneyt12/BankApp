@@ -2,6 +2,6 @@ package service;
 
 import model.UserModel;
 
-public interface IBankService {
+public interface IUserService {
     void paraYatir(UserModel userModel);
 }

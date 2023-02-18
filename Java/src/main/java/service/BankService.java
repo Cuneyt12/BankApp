@@ -1,7 +1,19 @@
 package service;
 
+import bank.GarantiBank;
 import model.UserModel;
 
-public abstract class BankService {
-    public abstract void paraYatir(UserModel userModel);
+public class BankService {
+    UserService userService;
+    IUserService iUserService;
+    public BankService(UserModel userModel){
+        if (userService == null){
+            userService = new GarantiBank(); // or new ZiraatBank();
+        }
+        /*if (iUserService == null){
+            iUserService = new GarantiBank();
+        }*/
+        userService.paraYatir(userModel);
+        //iUserService.paraYatir(userModel);
+    }
 }

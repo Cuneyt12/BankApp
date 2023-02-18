@@ -1,4 +1,4 @@
-import model.BankModel;
+import service.BankService;
 import model.UserModel;
 
 import java.util.Scanner;
@@ -18,6 +18,6 @@ public class Main {
         userModel.setIsim(isim);
         userModel.setMiktar(miktar);
 
-        BankModel bankModel = new BankModel(userModel);
+        BankService bankService = new BankService(userModel);
     }
 }
