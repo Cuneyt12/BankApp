@@ -3,6 +3,7 @@ import bank.ZiraatBank;
 import model.BankModel;
 import model.UserModel;
 import service.BankService;
+import service.IBankService;
 
 import java.util.Scanner;
 
@@ -22,6 +23,7 @@ public class Main {
         userModel.setMiktar(miktar);
 
         BankModel bankModel = new BankModel(userModel);
+
 
     }
 }

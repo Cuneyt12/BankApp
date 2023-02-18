@@ -2,10 +2,9 @@ package bank;
 
 import model.UserModel;
 import service.BankService;
+import service.IBankService;
 
-import java.util.Scanner;
-
-public class GarantiBank extends BankService {
+public class GarantiBank extends BankService implements IBankService {
 
     @Override
     public void paraYatir(UserModel userModel) {
