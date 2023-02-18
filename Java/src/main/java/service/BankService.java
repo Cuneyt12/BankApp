@@ -1,4 +1,7 @@
 package service;
 
-public class BankService {
+import model.UserModel;
+
+public abstract class BankService implements IBankService {
+    public abstract void paraYatir(UserModel userModel);
 }
