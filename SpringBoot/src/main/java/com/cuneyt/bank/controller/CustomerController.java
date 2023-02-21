@@ -4,10 +4,7 @@ import com.cuneyt.bank.entity.Customer;
 import com.cuneyt.bank.service.ICustomerService;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/musteri")
@@ -19,9 +16,9 @@ public class CustomerController {
         this.iCustomerService = iCustomerService;
     }
 
-    @PostMapping("/paraYatir")
-    public ResponseEntity<String> paraYatir(@RequestBody Customer customer) {
-        return ResponseEntity.ok(customer.getAd() + " " + customer.getSoyAd());
+    @PostMapping("/paraYatir/{banka}")
+    public ResponseEntity<String> paraYatir(@RequestBody Customer customer, @PathVariable String banka) {
+        return ResponseEntity.ok(iCustomerService.paraYatir(customer, banka));
     }
 
 }

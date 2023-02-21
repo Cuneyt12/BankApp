@@ -5,5 +5,5 @@ import org.springframework.stereotype.Service;
 
 @Service
 public interface ICustomerService {
-    void paraYatir(Customer customer);
+    String paraYatir(Customer customer, String banka);
 }
