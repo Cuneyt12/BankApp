@@ -16,9 +16,11 @@ public class CustomerServiceImpl implements ICustomerService {
 
     @Override
     public String paraYatir(Customer customer, String banka) {
-        Object toplamPara = iCustomerRepository.getTotalMoney() != null ? (Float)(iCustomerRepository.getTotalMoney()) + customer.getMiktar() :  customer.getMiktar();
+        Object toplamPara = iCustomerRepository.getTotalMoney() != null ? (float)(iCustomerRepository.getTotalMoney()) + customer.getMiktar() :  customer.getMiktar();
         customer.setToplamPara((float)toplamPara);
+        customer.setBankaAdi(banka);
         iCustomerRepository.save(customer);
         return customer.getAd() + " " + customer.getSoyAd() + " tarafından " + banka + " bankasına " + customer.getMiktar() + " TL yatırıldı.";
     }
+
 }
