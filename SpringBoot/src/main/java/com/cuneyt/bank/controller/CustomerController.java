@@ -17,7 +17,7 @@ public class CustomerController {
         this.iCustomerService = iCustomerService;
     }
 
-    @PostMapping("/yatir")
+    @PostMapping("/paraYatir")
     public ResponseEntity<String> paraYatir(@RequestBody Customer customer) {
         return ResponseEntity.ok(customer.getAd() + " " + customer.getSoyAd());
     }
