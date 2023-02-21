@@ -20,7 +20,7 @@ public class CustomerServiceImpl implements ICustomerService {
         customer.setToplamPara((float)toplamPara);
         customer.setBankaAdi(banka);
         iCustomerRepository.save(customer);
-        return customer.getAd() + " " + customer.getSoyAd() + " tarafından " + banka + " bankasına " + customer.getMiktar() + " TL yatırıldı.";
+        return customer.getAd() + " " + customer.getSoyAd() + " tarafından " + banka + " bankasına " + customer.getMiktar() + " TL yatırıldı";
     }
 
 }
