@@ -11,11 +11,11 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/kullanici")
 public class CustomerController {
-    /*private final ICustomerService iCustomerService;
+    private final ICustomerService iCustomerService;
 
     public CustomerController(ICustomerService iCustomerService) {
         this.iCustomerService = iCustomerService;
-    }*/
+    }
 
     @PostMapping("/yatir")
     public ResponseEntity<String> paraYatir(@RequestBody Customer customer) {
