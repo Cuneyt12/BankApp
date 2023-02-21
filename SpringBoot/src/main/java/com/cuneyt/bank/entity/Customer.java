@@ -9,7 +9,7 @@ import lombok.Data;
 @Entity
 @Data
 @Table(name = "musteri")
-public class User {
+public class Customer {
     @Id
     @Column(name = "id")
     private long id;
