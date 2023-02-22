@@ -19,6 +19,6 @@ public class ZiraatServiceImpl  implements ParaYatirmaService {
         Object toplamPara = iZiraatRepository.getTotalMoney(newEntity.getTc()) != null ? (float)iZiraatRepository.getTotalMoney(newEntity.getTc()) + newEntity.getMiktar() : newEntity.getMiktar();
         newEntity.setToplamPara((float)toplamPara);
         iZiraatRepository.save(newEntity);
-        return newEntity.getAd() + " " + newEntity.getSoyAd() + " tarafından ziraat bankasına " + newEntity.getMiktar() + " TL yatırıldı.";
+        return newEntity.getAd() + " " + newEntity.getSoyAd() + " tarafından ziraat bankasına " + newEntity.getMiktar() + " TL yatırıldı";
     }
 }
